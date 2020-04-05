@@ -1,5 +1,6 @@
-#include<iostream>
-int main() {
-    std::cout << "hello" << std::endl;
+#include "graphics.h"
+int main()
+{
+    initgraph(640, 480);
     return 0;
 }
