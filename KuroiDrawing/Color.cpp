@@ -1,6 +1,9 @@
 #include "Color.h"
-Color::Color(BYTE R_, BYTE G_, BYTE B_) :R{ R_ }, G{ G_ }, B{ B_ }{};
-Color::Color() { R = G = B = 0; }
+Color::Color(BYTE R_, BYTE G_, BYTE B_) :R{ R_ }, G{ G_ }, B{ B_ }{color = EGERGB(R, G, B);};
+Color::Color() {
+    R = G = B = 0;
+    color = EGERGB(R, G, B);
+}
 const BYTE& Color::getR() { return this->R; };
 const BYTE& Color::getG() { return this->G; };
 const BYTE& Color::getB() { return this->B; };

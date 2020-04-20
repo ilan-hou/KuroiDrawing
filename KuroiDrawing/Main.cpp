@@ -6,5 +6,6 @@ int main() {
     //²âÊÔ´úÂë
     Controller controller(2, 1000, 1000);
     controller.initialize();
+
     Circle circle(Point(50.0, 50.0), 20.0);
 }
