@@ -1,8 +1,9 @@
 #pragma once
 class Point {
 public:
-    Point(const int& x_, const int& y_);
+    Point(int x_, int y_);
     Point();
+    Point(Point& point);//¿½±´¹¹Ôìº¯Êý
     const int& getX();
     const int& getY();
     void setX(int& x_);

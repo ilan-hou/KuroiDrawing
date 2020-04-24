@@ -1,6 +1,10 @@
 #include "Point.h"
-Point::Point(const int& x_, const int& y_) :x{ x_ }, y{ y_ } {}
-Point::Point() : Point{ 1.0,1.0 } {}
+Point::Point(int x_, int y_) :x{ x_ }, y{ y_ } {}
+Point::Point() { this->x = this->y = 1; }
+Point::Point(Point& point) {
+    this->x = point.x;
+    this->y = point.y;
+}
 const int& Point::getX() { return this->x; }
 const int& Point::getY() { return this->y; }
 void Point::setX(int& x_) { x = x_; }

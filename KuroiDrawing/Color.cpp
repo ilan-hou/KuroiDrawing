@@ -5,6 +5,12 @@ Color::Color() {
     color = EGERGB(R, G, B);
 }
 Color::Color(color_t color_) :color{ color_ } {}
+Color::Color(Color& color) {
+    this->B = color.B;
+    this->R = color.R;
+    this->G = color.G;
+    this->color = color.color;
+}
 const BYTE& Color::getR() { return this->R; };
 const BYTE& Color::getG() { return this->G; };
 const BYTE& Color::getB() { return this->B; };

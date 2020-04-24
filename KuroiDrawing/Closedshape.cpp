@@ -1,4 +1,5 @@
 #include "Closedshape.h"
+#include<string>
 Closedshape::Closedshape(Color fill_color_, Color boarder_color_) :fill_color{ fill_color_ }, boarder_color{ boarder_color_ } {};
 Closedshape::Closedshape() {
     fill_color = Color();
@@ -18,3 +19,11 @@ void Closedshape::setDrawEnvir() {
     setlinestyle(this->getLinestyle());
     setcolor(this->getFillColor().getColor());
 }
+const char* Closedshape::to_char(int& num) {
+    std::string s = std::to_string(num);
+    char* cp = new char[4];//最多存储一个4位数
+    for (int i = 0;i < s.size() - 1;i++) {
+        cp[i] = s[i];
+    }
+    return cp;
+};

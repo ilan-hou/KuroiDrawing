@@ -1,6 +1,9 @@
 #include"Triangle.h"
-Triangle::Triangle(std::array<Point, 3>iPoint_) { iPoint = iPoint_; }
-Triangle::Triangle() {};
+Triangle::Triangle(std::array<Point, 3>iPoint_) {
+    iPoint = iPoint_;
+    ++nTriangles;
+}
+Triangle::Triangle() { ++nTriangles; };
 const std::array<Point, 3>* Triangle::getAllPoint() { return &iPoint; };
 void Triangle::draw() {
     this->setDrawEnvir();
@@ -19,4 +22,8 @@ void Triangle::setOnePoint(const int& index, Point& point) {
         break;
     default:outtextxy(200, 200, "输入了非法的三角形点的下标");
     }
+};
+Triangle::~Triangle() {
+    --nTriangles;
+    outtextxy(210, 210, this->to_char(nTriangles));
 };
