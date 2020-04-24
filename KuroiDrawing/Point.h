@@ -1,11 +1,11 @@
 #pragma once
 class Point {
 public:
-    Point(const double& x_, const double& y_);
+    Point(const int& x_, const int& y_);
     Point();
-    const double& getX();
-    const double& getY();
-    void setX(double& x_);
-    void setY(double& y_);
-private: double x, y;
+    const int& getX();
+    const int& getY();
+    void setX(int& x_);
+    void setY(int& y_);
+private: int x, y;
 };

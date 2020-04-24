@@ -3,6 +3,7 @@
 class Color {
 public:
     Color(BYTE R_, BYTE G_, BYTE B_);
+    Color(color_t color_);
     Color();
     const BYTE& getR();
     const BYTE& getG();

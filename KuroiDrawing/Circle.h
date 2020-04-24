@@ -3,6 +3,7 @@
 
 class Circle :public Closedshape {
 public:
+    void draw();
     Circle(Point point_, double radius_);
     Circle();
     const Point& getCenterPoint();

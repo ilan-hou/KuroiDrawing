@@ -1,16 +1,17 @@
 #pragma once
 #include"Closedshape.h"
-class Rectangle {
+class Rectangle :public Closedshape {
 public:
-    Rectangle(Point& point_, double height_, double width_);
+    Rectangle(Point& point_, int height_, int width_);
     Rectangle();
-    const double& getWidth();
-    const double& getHeight();
+    const int& getWidth();
+    const int& getHeight();
     const Point& getPoint();
-    void setWidth(double& width_);
-    void setHeight(double& height_);
+    void draw();
+    void setWidth(int& width_);
+    void setHeight(int& height_);
     void setPoint(Point& point_);
 private:
     Point point; //矩形的左上点
-    double width, height;
+    int width, height;
 };

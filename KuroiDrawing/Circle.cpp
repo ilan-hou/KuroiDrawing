@@ -2,8 +2,13 @@
 Circle::Circle(Point point_, double radius_) {
     center_point = point_;
     radius = radius_;
+
     circlef(center_point.getX(), center_point.getY(), radius);//将构造的圆绘制出
     delay(1000);//延迟一秒，方便展示绘图效果
+};
+void Circle::draw() {
+    this->setDrawEnvir();
+    circlef(center_point.getX(), center_point.getY(), radius);
 };
 Circle::Circle() {
     center_point = Point();

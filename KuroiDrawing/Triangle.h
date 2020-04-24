@@ -3,6 +3,7 @@
 #include <array>
 class Triangle :public Closedshape {
 public:
+    void draw();
     Triangle(std::array<Point, 3>iPoint_);
     Triangle();
     const std::array<Point, 3>* getAllPoint();//该函数用于获得指向存放三角形多有顶点的数组的指针

@@ -12,6 +12,7 @@ Controller::Controller() {
 void Controller::initialize() {
     initgraph(width, height);//初始绘图环境
     setinitmode(INIT_NOBORDER);//设置窗口无边框
+    setbkcolor(WHITE);
 };
 void Controller::allclear() { cleardevice(); };
 void Controller::close() { closegraph(); }

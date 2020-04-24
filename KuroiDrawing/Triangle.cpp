@@ -2,6 +2,13 @@
 Triangle::Triangle(std::array<Point, 3>iPoint_) { iPoint = iPoint_; }
 Triangle::Triangle() {};
 const std::array<Point, 3>* Triangle::getAllPoint() { return &iPoint; };
+void Triangle::draw() {
+    this->setDrawEnvir();
+    int temp[6] = { iPoint[0].getX(),iPoint[0].getY(),iPoint[1].getX(), iPoint[1].getY(),iPoint[2].getX(),iPoint[2].getY() };
+    //创建一个临时int数组储存三角形对象三个顶点的坐标
+    drawpoly(3, temp);//用于画出边框，体现边框颜色
+    fillpoly(3, temp);//用于体现填充颜色
+};
 void Triangle::setOnePoint(const int& index, Point& point) {
     switch (index) {
     case 0: iPoint[0] = point;

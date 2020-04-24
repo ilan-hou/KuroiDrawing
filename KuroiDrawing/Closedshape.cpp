@@ -4,7 +4,17 @@ Closedshape::Closedshape() {
     fill_color = Color();
     boarder_color = Color();
 };
-const Color& Closedshape::getFillColor() { return this->fill_color; };
-const Color& Closedshape::getBoarderColor() { return this->boarder_color; };
+Color& Closedshape::getFillColor() { return this->fill_color; };
+Color& Closedshape::getBoarderColor() { return this->boarder_color; };
+const int& Closedshape::getLinewidth() { return this->linewidth; };
+const int& Closedshape::getLinestyle() { return this->linestyle; };
 void Closedshape::setFillColor(const Color& fill_color_) { fill_color = fill_color_; };
 void Closedshape::setBoaderColor(const Color& boarder_color_) { boarder_color = boarder_color_; };
+void Closedshape::setLinewidth(const int linewidth_) { linewidth = linewidth_; };
+void Closedshape::setLinestyle(const int linestyle_) { linestyle = linestyle_; };
+void Closedshape::setDrawEnvir() {
+    setfillcolor(this->getFillColor().getColor());
+    setlinewidth(this->getLinewidth());
+    setlinestyle(this->getLinestyle());
+    setcolor(this->getFillColor().getColor());
+}
