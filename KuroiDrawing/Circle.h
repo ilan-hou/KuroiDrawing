@@ -9,6 +9,7 @@ public:
     Circle(Circle& circle);//¿½±´¹¹Ôìº¯Êý
     const Point& getCenterPoint();
     const double& getRadius();
+    static int getNcircles();
     void setCenterPoint(const Point& point);
     void setRadius(const double& radius_);
     ~Circle();

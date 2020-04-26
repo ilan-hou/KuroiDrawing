@@ -45,6 +45,9 @@
     <ClCompile Include="Ellipse.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ege_stream.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h">
@@ -78,6 +81,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Ellipse.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ege_stream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="egechar.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

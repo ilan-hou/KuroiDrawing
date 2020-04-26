@@ -24,6 +24,7 @@ void Circle::draw() {
 };
 const Point& Circle::getCenterPoint() { return this->center_point; };
 const double& Circle::getRadius() { return this->radius; };
+int Circle::getNcircles() { return nCircles; };
 void Circle::setCenterPoint(const Point& point) { center_point = point; };
 void Circle::setRadius(const double& radius_) { radius = radius_; };
 Circle::~Circle() {

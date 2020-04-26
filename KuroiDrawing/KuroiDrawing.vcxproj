@@ -143,6 +143,7 @@
     <ClCompile Include="Closedshape.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="ege_stream.cpp" />
     <ClCompile Include="Ellipse.cpp" />
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -156,6 +157,8 @@
     <ClInclude Include="Closedshape.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Controller.h" />
+    <ClInclude Include="egechar.h" />
+    <ClInclude Include="ege_stream.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Polygon.h" />

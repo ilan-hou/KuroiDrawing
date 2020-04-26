@@ -5,7 +5,8 @@ public:
     Controller(int dimension_, int width_, int height_);
     Controller();
     void initialize();
-    void allclear();
+    void cleardraw();
+    void clearN();//用于刷新输入框
     void close();
     const int& getDimension();
     const int& getWidth();
