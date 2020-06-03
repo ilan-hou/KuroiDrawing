@@ -27,9 +27,6 @@
     <ClCompile Include="Closedshape.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Rectangle.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Triangle.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -45,15 +42,21 @@
     <ClCompile Include="Ellipse.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ege_stream.cpp">
+    <ClCompile Include="Button.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Poly.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Egefile.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Rectangle.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Triangle.h">
@@ -68,9 +71,6 @@
     <ClInclude Include="Controller.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Polygon.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Arc.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -83,10 +83,19 @@
     <ClInclude Include="Ellipse.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="ege_stream.h">
+    <ClInclude Include="egechar.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="egechar.h">
+    <ClInclude Include="Button.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Poly.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Egefile.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

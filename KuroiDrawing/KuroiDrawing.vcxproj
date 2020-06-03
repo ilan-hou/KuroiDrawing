@@ -23,6 +23,7 @@
     <ProjectGuid>{3489C120-B97F-4427-AC93-0AFEC0D73380}</ProjectGuid>
     <RootNamespace>KuroiDrawing</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>KuroiDarwing</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -87,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>NotSet</SubSystem>
@@ -143,26 +145,29 @@
     <ClCompile Include="Closedshape.cpp" />
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Controller.cpp" />
-    <ClCompile Include="ege_stream.cpp" />
+    <ClCompile Include="Egefile.cpp" />
     <ClCompile Include="Ellipse.cpp" />
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Point.cpp" />
-    <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="Poly.cpp" />
+    <ClCompile Include="Rect.cpp" />
     <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="Button.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arc.h" />
+    <ClInclude Include="Button.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Closedshape.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="egechar.h" />
-    <ClInclude Include="ege_stream.h" />
+    <ClInclude Include="Egefile.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="Point.h" />
-    <ClInclude Include="Polygon.h" />
-    <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="Poly.h" />
+    <ClInclude Include="Rect.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Ellipse.h" />
   </ItemGroup>

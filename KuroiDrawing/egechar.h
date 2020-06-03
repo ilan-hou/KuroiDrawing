@@ -5,8 +5,14 @@
 #include<vector>
 using std::string;
 using std::vector;
+char* to_char(int& num) {
+    std::string s = std::to_string(num);
+    char chrs[4];
+    strcpy_s(chrs, 4, s.c_str());
+    return chrs;
+};
 vector<int>  getInt(const char* c) {
-    string s, ss;
+    string s = "", ss = "";
     bool flag = false;
     vector<int> a;
     for (int i = 0;i < 100;i++) {
@@ -23,7 +29,7 @@ vector<int>  getInt(const char* c) {
         }
         else {
             std::istringstream iss(ss);
-            int num;
+            int num = { 0 };
             iss >> num;
             a.push_back(num);
             s.erase(0, 1);

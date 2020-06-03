@@ -1,7 +1,7 @@
 #include "Point.h"
 Point::Point(int x_, int y_) :x{ x_ }, y{ y_ } {}
 Point::Point() { this->x = this->y = 1; }
-Point::Point(Point& point) {
+Point::Point(const Point& point) {
     this->x = point.x;
     this->y = point.y;
 }

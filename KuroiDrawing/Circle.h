@@ -1,20 +1,19 @@
 #pragma once
 #include"Closedshape.h"
-
 class Circle :public Closedshape {
 public:
-    void draw();
+    void draw(int op);//1Îª»­Ìî³äÔ²£¬0Îª»­ÎÞÌî³äÔ²
     Circle(Point& point_, double radius_);
     Circle();
     Circle(Circle& circle);//¿½±´¹¹Ôìº¯Êý
-    const Point& getCenterPoint();
-    const double& getRadius();
-    static int getNcircles();
+    Point& getCenterPoint();
+    int& getRadius();
+    static int& getNcircles();
     void setCenterPoint(const Point& point);
-    void setRadius(const double& radius_);
+    void setRadius(const int& radius_);
     ~Circle();
 private:
-    Point center_point;
-    double radius;
+    Point center_point{ 0,0 };
+    int radius = { 0 };
     static int nCircles;
 };

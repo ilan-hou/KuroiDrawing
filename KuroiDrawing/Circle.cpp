@@ -18,16 +18,15 @@ Circle::Circle(Circle& circle) {
     this->setLinestyle(circle.getLinestyle());
     ++nCircles;
 }
-void Circle::draw() {
+void Circle::draw(int op) {
     this->setDrawEnvir();
-    circlef(center_point.getX(), center_point.getY(), radius);
+    if (0 == op) { circle(center_point.getX(), center_point.getY(), radius); }
+    else if (1 == op) { pieslice(center_point.getX(), center_point.getY(), 0, 360, radius); }
 };
-const Point& Circle::getCenterPoint() { return this->center_point; };
-const double& Circle::getRadius() { return this->radius; };
-int Circle::getNcircles() { return nCircles; };
+Point& Circle::getCenterPoint() { return this->center_point; };
+int& Circle::getRadius() { return this->radius; };
+int& Circle::getNcircles() { return nCircles; };
 void Circle::setCenterPoint(const Point& point) { center_point = point; };
-void Circle::setRadius(const double& radius_) { radius = radius_; };
+void Circle::setRadius(const int& radius_) { radius = radius_; };
 Circle::~Circle() {
-    --nCircles;
-    outtextxy(200, 200, this->to_char(nCircles));
 };

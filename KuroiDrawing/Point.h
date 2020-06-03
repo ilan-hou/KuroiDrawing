@@ -3,10 +3,10 @@ class Point {
 public:
     Point(int x_, int y_);
     Point();
-    Point(Point& point);//拷贝构造函数
+    Point(const Point& point);//拷贝构造函数
     const int& getX();
     const int& getY();
     void setX(int& x_);
     void setY(int& y_);
-private: int x, y;
+private: int x = { 0 }, y = { 0 };
 };

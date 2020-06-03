@@ -2,10 +2,13 @@
 #include<vector>
 #include"Closedshape.h"
 using std::vector;
-class Polygon :public Closedshape {
+class Poly :public Closedshape {
 public:
-    const int& getNpoint();
-    vector<Point>& getIpoint();
+    Poly(vector<Point> iPoint_);
+    Poly();
+    vector<Point> getIpoint();
+    static int& getNpoly();
+    void draw(int op);
 private: int nPoints;
        vector<Point>iPoint;
        static int nPolygons;
