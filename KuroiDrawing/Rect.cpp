@@ -1,5 +1,37 @@
 #include "Rect.h"
 int nRectangles = 0;
+bool Rect::isEqual(const Rect& r)const {
+    if (this->width == r.getWidth() && this->height == r.getHeight()) {
+        return true;
+    }
+    else { return false; }
+};
+
+bool Rect::operator >(const Rect& r)const { return this->getArea() > r.getArea(); };
+bool Rect::operator <(const Rect& r) const { return this->getArea() < r.getArea(); };
+bool Rect::operator >=(const Rect& r)const { return this->getArea() >= r.getArea(); };
+bool Rect::operator <=(const Rect& r) const { return this->getArea() <= r.getArea(); };
+bool Rect::operator ==(const Rect& r)const { return this->isEqual(r); };
+bool Rect::operator !=(const Rect& r) const { return !(this->isEqual(r)); };
+Rect& Rect::operator =(Rect& r) {
+    this->point = r.getPoint();
+    this->width = r.getWidth();
+    this->height = r.getHeight();
+    return *this;
+};
+int& Rect::operator [](const int index) {
+    switch (index) {
+    case 0: {return point.getX();}
+          break;
+    case 1: {return point.getY();}
+          break;
+    case 2: {return height;}
+          break;
+    case 3: {return width;}
+          break;
+    default: {throw std::out_of_range("Ë÷ÒýÖµ³¬³ö·¶Î§£¡");}
+    }
+};
 Rect::Rect(Point& point_, int height_, int width_) {
     point = point_;
     height = height_;
@@ -9,6 +41,7 @@ Rect::Rect(Point& point_, int height_, int width_) {
 int& Rect::getNrect() {
     return nRectangles;
 };
+const int Rect::getArea()const { return width * height; };
 Rect::Rect() {
     point = Point();
     height = width = 0;
@@ -26,8 +59,8 @@ Rect::Rect(Rect& rectangle) {
 }
 Rect::~Rect() {
 };
-const int& Rect::getWidth() { return this->width; };
-const int& Rect::getHeight() { return this->height; };
+const int& Rect::getWidth() const { return this->width; };
+const int& Rect::getHeight()const { return this->height; };
 Point& Rect::getPoint() { return this->point; };
 void Rect::setWidth(int& width_) { width = width_; };
 void Rect::setHeight(int& height_) { height = height_; };

@@ -16,7 +16,6 @@ using std::vector;
 using std::string;
 using std::fstream;
 using std::ios;
-namespace fs = std::filesystem;
 class Egefile {
 public:
     Egefile() = default;

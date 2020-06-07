@@ -33,9 +33,6 @@
     <ClCompile Include="Controller.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Line.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -53,6 +50,12 @@
     </ClCompile>
     <ClCompile Include="Egefile.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ege_stream.cpp">
+      <Filter>头文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -98,5 +101,22 @@
     <ClInclude Include="Egefile.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ege_stream.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="index_except.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="test_overload.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="button.png">
+      <Filter>头文件</Filter>
+    </Image>
+    <Image Include="change.png">
+      <Filter>头文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>

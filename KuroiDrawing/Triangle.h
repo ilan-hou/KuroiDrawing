@@ -1,8 +1,19 @@
 #pragma once
 #include "Closedshape.h"
 #include <array>
+#include <stdexcept>
 class Triangle :public Closedshape {
 public:
+    const double getArea();//利用海伦公式计算三角形的面积
+    bool operator >(Triangle& t);
+    bool operator <(Triangle& t);
+    bool operator >=(Triangle& t);
+    bool operator <=(Triangle& t);
+    bool operator ==(Triangle& t);
+    bool operator !=(Triangle& t);
+    Triangle& operator =(Triangle& t);
+    int& operator [](const int index);
+    bool isEqual(Triangle& t);
     void draw(int op);
     Triangle(std::array<Point, 3>iPoint_);
     Triangle();

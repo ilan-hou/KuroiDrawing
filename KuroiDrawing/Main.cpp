@@ -7,6 +7,8 @@
 #include"egechar.h"
 #include "button.h"
 #include "Egefile.h"
+#include "test_overload.h"
+#include "index_except.h"
 //定义静态变量
 int Rect::nRectangles = 0;
 int Line::nLines = 0;
@@ -33,6 +35,11 @@ int main() {
         controller.getHeight() / 16, "多边形");//画多边形的按钮
     Button readB(controller.getWidth() / 100, controller.getHeight() / 4 + 240, controller.getWidth() / 12,
         controller.getHeight() / 16, "读入");//从文件输入的按钮
+    Button testB(controller.getWidth() / 100, controller.getHeight() / 4 + 300, controller.getWidth() / 12,
+        controller.getHeight() / 16, "测试重载");//测试运算符重载的按钮
+    Button indexB(controller.getWidth() / 100, controller.getHeight() / 4 + 340, controller.getWidth() / 12,
+        controller.getHeight() / 16, "异常处理");//测试运算符重载的按钮
+    //test();
     for (; is_run(); delay_fps(1000)) {
         setcolor(BLACK);
         controller.showNum();
@@ -154,6 +161,7 @@ int main() {
             char buf[200] = "0";//为输入区定义一个缓冲区
             editBox.gettext(200, buf);
             vector<int>temp = getInt(buf);
+            controller.clearNum();
             efile.read(1);
             if (1 == temp.size()) {
                 efile.read(temp[0]);
@@ -164,5 +172,9 @@ int main() {
                 controller.notice("输入的参数数目不对！");
             }
         }
+        if (testB.buttonMsg()) {
+            test();
+        }
+        if (indexB.buttonMsg()) { index_except(); }
     }
 }

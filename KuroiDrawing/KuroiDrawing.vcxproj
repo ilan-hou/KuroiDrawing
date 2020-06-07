@@ -146,6 +146,7 @@
     <ClCompile Include="Color.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Egefile.cpp" />
+    <ClCompile Include="ege_stream.cpp" />
     <ClCompile Include="Ellipse.cpp" />
     <ClCompile Include="Line.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -164,12 +165,19 @@
     <ClInclude Include="Controller.h" />
     <ClInclude Include="egechar.h" />
     <ClInclude Include="Egefile.h" />
+    <ClInclude Include="ege_stream.h" />
+    <ClInclude Include="index_except.h" />
     <ClInclude Include="Line.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Poly.h" />
     <ClInclude Include="Rect.h" />
+    <ClInclude Include="test_overload.h" />
     <ClInclude Include="Triangle.h" />
     <ClInclude Include="Ellipse.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="button.png" />
+    <Image Include="change.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

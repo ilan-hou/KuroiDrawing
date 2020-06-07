@@ -16,6 +16,6 @@ public:
     Color& getFillColor();
     Color& getBoarderColor();
     const int& getLinestyle();
-private:  Color fill_color = Color(WHITE), boarder_color = Color(BLACK);
+private:  Color fill_color = WHITE, boarder_color = BLACK;
        int linewidth = 1, linestyle = SOLID_LINE;
 };
